@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Trophy Guide — GTA VI (PS5)</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div>
+    <p class="eyebrow">Grand Theft Auto VI &middot; PlayStation 5 &middot; Unofficial fan guide</p>
+    <h1>Leonida Trophy Guide</h1>
+    <p class="tagline">All 55 trophies, with their official names, descriptions and grades, a cited guide for each, a roadmap to the platinum, and a checklist that saves in your browser. Works fully offline.</p>
+  </div>
+  <div class="progress-box" aria-label="Progress">
+    <p class="progress-number"><span id="progress-text">0 / 55</span> <span class="progress-word">earned</span></p>
+    <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+    <p class="progress-grades" id="progress-grades"></p>
+    <p class="progress-platinum" id="progress-platinum">Platinum: locked — earn the other 54 trophies</p>
+  </div>
+</header>
+
+<nav class="tabs" aria-label="Views">
+  <button type="button" id="tab-checklist" class="tab active">Checklist</button>
+  <button type="button" id="tab-roadmap" class="tab">Roadmap to Platinum</button>
+</nav>
+
+<section class="toolbar" aria-label="Filters and tools">
+  <label class="field search-field">Search <input type="search" id="search" placeholder="Trophy name, description or guide…" autocomplete="off"></label>
+  <label class="field">Kind
+    <select id="kind">
+      <option value="all">All kinds</option>
+      <option value="story">Story</option>
+      <option value="collectibles">Collectibles</option>
+      <option value="activities">Activities</option>
+      <option value="online">Online</option>
+      <option value="other">Other</option>
+    </select>
+  </label>
+  <label class="field">Grade
+    <select id="grade">
+      <option value="all">All grades</option>
+      <option value="platinum">Platinum</option>
+      <option value="gold">Gold</option>
+      <option value="silver">Silver</option>
+      <option value="bronze">Bronze</option>
+    </select>
+  </label>
+  <label class="check"><input type="checkbox" id="missable-only"> Missable only</label>
+  <label class="check"><input type="checkbox" id="spoiler"> Hide story spoilers</label>
+  <button type="button" id="export">Export progress</button>
+  <label class="import">Import progress <input type="file" id="import" accept="application/json"></label>
+</section>
+<p class="showing" id="showing-count"></p>
+
+<main class="layout">
+  <section id="list" class="trophy-list" aria-label="Trophy checklist"></section>
+
+  <aside id="detail" class="detail" aria-label="Trophy guide">
+    <p class="detail-empty">Select a trophy to read its guide and sources.</p>
+  </aside>
+
+  <section id="roadmap" class="roadmap" aria-label="Roadmap to the platinum" hidden></section>
+</main>
+
+<footer>
+  <p><strong>Sources.</strong> Official trophy names, descriptions and grades are as PlayStation publishes them, as listed by Exophase and PSNProfiles, the two agreeing. Each guide is written in our own words from the official description and cites its sources beside it; where the description states no location, step or target, the guide says so instead of inventing one.</p>
+  <p><strong>Missable means story-gated.</strong> A trophy is flagged missable only where its official description ties it to one story chapter or mission, or to a choice made once — the reason is written inside its guide. Everything else can be earned at any time.</p>
+  <p>Unofficial fan guide, not affiliated with Rockstar Games or PlayStation. No logos, artwork or game screenshots are used. Progress is stored only in this browser (localStorage); export downloads a JSON file and import reads one back.</p>
+</footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>
